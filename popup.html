@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cursor Trail Extension</title>
+    <style>
+      body {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Cursor Trail Options</h3>
+
+    <button id="toggleEffect">Enable</button>
+    <br /><br />
+
+    <label for="trailColor">Trail Color:</label>
+    <input type="color" id="trailColor" />
+    <br />
+
+    <label for="trailSize">Trail Size (px):</label>
+    <input type="number" id="trailSize" min="1" max="50" value="6" />
+    <br />
+
+    <label for="rippleSize">Ripple Size (px):</label>
+    <input type="number" id="rippleSize" min="1" max="100" value="30" />
+    <br />
+
+    <label for="trailScale">Trail Scale (1-10):</label>
+    <input type="range" id="trailScale" min="1" max="10" step="0.1" value="1" />
+    <br />
+    <label for="trailTime">Trail Disappearance Time (ms):</label>
+    <input
+      type="number"
+      id="trailDisappearTime"
+      min="100"
+      max="5000"
+      value="500"
+    />
+
+    <br />
+    <button id="save">Save</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

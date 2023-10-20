@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cursor Trail and Ripple Effect",
+  "version": "1.0",
+  "description": "Draws a trail effect behind the cursor and a ripple effect on click",
+  "icons": { "48": "icon.png" },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
